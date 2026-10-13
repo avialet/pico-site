@@ -57,8 +57,8 @@ le serveur par `rsync` via SSH, grâce au workflow `.github/workflows/deploy.yml
 
 - Le bouton de téléchargement lit la dernière version publiée sur GitHub (`avialet/pico`) :
   publier une nouvelle version de l'app met le site à jour sans le redéployer.
-- Les captures viennent de `Pico/docs/screenshots` ; les convertir en WebP avant de les copier dans `site/public/img`.
+- Les captures d'écran éventuelles vont dans `site/public/img`, converties en WebP au préalable.
 
 ## Aperçu local
 
-    cd site/public && python3 -m http.server 8765
+    cd site/public && python3 -m http.server 8766

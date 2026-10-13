@@ -1,0 +1,61 @@
+{
+  "app": "Pico",
+  "affiche": "Pico",
+  "domaine": "pico.vialet.app",
+  "depot": "avialet/pico",
+  "accroche": "Le gestionnaire de tâches qui comprend vos phrases.",
+  "titre": [
+    "Le gestionnaire de tâches",
+    "qui comprend vos phrases."
+  ],
+  "sous_titre": "Tapez « Relancer le fournisseur demain 14h #Infra @urgent » et Pico range le jour, l'heure, le projet, le tag.",
+  "hero": {
+    "image": "fenetre",
+    "alt": "Pico, la liste Aujourd'hui : les tâches du jour, la section Ce soir et la jauge de charge de la journée"
+  },
+  "fonctions": [
+    {
+      "titre": "Aujourd'hui, À venir, Un jour",
+      "texte": "Les listes d'un système GTD, avec « Ce soir » à part et une jauge qui prévient quand la journée déborde. Ce qui n'a pas été fait attend dans « Pas encore fait », jamais en pile rouge.",
+      "image": "fenetre",
+      "alt": "La liste Aujourd'hui de Pico, avec la jauge de charge et la section Ce soir"
+    },
+    {
+      "titre": "Projets, échéances, récurrences",
+      "texte": "Un anneau d'avancement par projet, des sections, des tags, une checklist et des notes. Prévu et échéance restent distincts, et une récurrence peut suivre la fin de la tâche.",
+      "image": "detail",
+      "alt": "Un projet dans Pico, avec un ticket importé et le détail d'une tâche"
+    }
+  ],
+  "captures": [
+    {
+      "nom": "fenetre",
+      "source": "aujourdhui-clair"
+    },
+    {
+      "nom": "detail",
+      "source": "projet-clair"
+    }
+  ],
+  "confidentialite": "Vos tâches sont dans un fichier SQLite sur votre Mac, que vous pouvez copier pour sauvegarder. Rien ne quitte votre Mac : le seul échange réseau est la lecture de la dernière version publiée sur GitHub, désactivable dans les réglages.",
+  "donnees": "~/Library/Application Support/Pico/pico.sqlite",
+  "faq": [
+    {
+      "q": "Pourquoi cet avertissement au premier lancement ?",
+      "r": "Pico n'est ni signé avec un certificat Apple Developer ni notarisé, alors macOS bloque le premier lancement. Depuis macOS 15, le contournement « Contrôle-clic, puis Ouvrir » n'existe plus : le passage par Réglages Système est le seul chemin."
+    },
+    {
+      "q": "Comment vérifier le fichier téléchargé ?",
+      "r": "Chaque version publie son empreinte SHA-256. Dans le dossier du téléchargement : <code>shasum -a 256 -c Pico-X.Y.Z.dmg.sha256</code>. Pico fait cette vérification lui-même avant d'installer une mise à jour."
+    },
+    {
+      "q": "Et la suite ?",
+      "r": "Rappels et notifications, événements du Calendrier, palette de commandes, import de tickets, widgets, synchronisation personnelle. La <a href=\"https://github.com/avialet/pico#feuille-de-route\" rel=\"noopener\">feuille de route</a> est publique."
+    }
+  ],
+  "libres": {
+    "apres_hero": "partiels/notice.html",
+    "apres_fonctions": "",
+    "avant_installer": ""
+  }
+}
