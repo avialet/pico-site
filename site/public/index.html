@@ -28,7 +28,8 @@
     </a>
     <nav aria-label="Navigation principale">
       <a href="#fonctions">Fonctions</a>
-      <a href="#capture">Capture</a>
+      <a href="#raccourci">Raccourci</a>
+      <a href="#voir">Voir Pico</a>
       <a href="#notice">Notice</a>
       <a href="#installer">Installer</a>
       <a class="gh" href="https://github.com/avialet/pico" rel="noopener">GitHub</a>
@@ -47,7 +48,7 @@
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.78 1.3 10.33.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.38.81 1.4-.02 2.28-1.27 3.13-2.52.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.7-1.04-2.72-4.13zM14.47 4.4c.72-.87 1.2-2.07 1.07-3.27-1.03.04-2.28.69-3.02 1.55-.66.77-1.24 2-1.09 3.17 1.15.09 2.32-.58 3.04-1.45z"/></svg>
             <span data-download-label>Télécharger pour Mac</span>
           </a>
-          <a class="btn btn-ghost" href="#capture">Voir comment ça marche</a>
+          <a class="btn btn-ghost" href="#voir">Voir Pico</a>
         </div>
         <p class="fine" data-download-meta>Apple Silicon · macOS 26 Tahoe ou plus récent</p>
       </div>
@@ -71,7 +72,7 @@
       </div>
     </section>
 
-    <section class="shot" aria-label="Capture de Pico">
+    <section class="shot" aria-label="Aperçu de Pico">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="/img/detail-sombre.webp">
         <img src="/img/aujourdhui-clair.webp" width="1600" height="1023" alt="Pico, la liste Aujourd'hui : tâches du jour, section Ce soir et jauge de charge de la journée" fetchpriority="high">
@@ -139,31 +140,29 @@
       </div>
     </section>
 
-    <section id="capture" class="capture">
-      <div class="capture-copy">
-        <p class="eyebrow">Raccourci global</p>
-        <h2 class="section-title left">Une idée ? <span class="keys"><kbd>⇧</kbd><kbd>⌘</kbd><kbd>Espace</kbd></span></h2>
-        <p>Depuis n'importe quelle app, une petite fenêtre s'ouvre par-dessus ce que vous faites. Vous tapez la phrase, <kbd>↩</kbd>, et elle se referme : la tâche est rangée au bon endroit, sans que Pico passe au premier plan.</p>
-        <ul class="ticks">
-          <li>Le raccourci se change dans les réglages</li>
-          <li>Une icône dans la barre des menus affiche le nombre de tâches du jour</li>
-          <li>Coller plusieurs lignes crée une tâche par ligne</li>
-        </ul>
-      </div>
-      <div class="mock-panel" aria-hidden="true">
-        <div class="mp-row"><span class="plus">+</span><span class="mp-text">Appeler le plombier ce soir ~15m</span></div>
-        <div class="mp-chips">
-          <span class="chip lav">☾ Aujourd'hui soir</span>
-          <span class="chip grey">⧖ 15 min</span>
-        </div>
-        <div class="mp-foot"><span><kbd>↩</kbd> ajouter</span><span><kbd>⎋</kbd> fermer</span><b>→ Aujourd'hui</b></div>
-      </div>
+    <section id="raccourci" class="shortcut">
+      <p class="eyebrow">Raccourci global</p>
+      <h2 class="section-title">Une idée ? <span class="keys"><kbd>⇧</kbd><kbd>⌘</kbd><kbd>Espace</kbd></span></h2>
+      <p class="sub">Depuis n'importe quelle app, une petite fenêtre s'ouvre par-dessus ce que vous faites. Vous tapez la phrase, <kbd>↩</kbd>, et elle se referme : la tâche est rangée au bon endroit, sans que Pico passe au premier plan.</p>
+      <figure class="screen">
+        <img loading="lazy" src="/img/raccourci-ecran.webp" width="2000" height="1250" alt="Un Mac au coucher du soleil : par-dessus une autre app, la petite fenêtre de Pico affiche la phrase « Appeler plombier demain 9h #Appart @appel » et les éléments reconnus, pendant que les touches Maj, Commande et Espace sont enfoncées">
+      </figure>
+      <ul class="ticks">
+        <li>Le raccourci se change dans les réglages</li>
+        <li>Une icône dans la barre des menus affiche le nombre de tâches du jour</li>
+        <li>Coller plusieurs lignes crée une tâche par ligne</li>
+      </ul>
     </section>
 
-    <section class="gallery" aria-label="Autres captures">
-      <figure><img loading="lazy" src="/img/saisie-rapide.webp" width="1400" height="895" alt="La barre de saisie avec l'aperçu des éléments reconnus"><figcaption>La saisie, avec ce que Pico a compris</figcaption></figure>
-      <figure><img loading="lazy" src="/img/a-venir-clair.webp" width="1400" height="895" alt="La liste À venir, jour par jour"><figcaption>À venir, jour par jour</figcaption></figure>
-      <figure><img loading="lazy" src="/img/projet-clair.webp" width="1400" height="895" alt="Un projet avec un ticket importé et le détail d'une tâche"><figcaption>Un projet, un ticket, le détail d'une tâche</figcaption></figure>
+    <section id="voir" class="gallery" aria-label="Voir Pico">
+      <h2 class="section-title">Voir Pico</h2>
+      <p class="sub">La saisie, les listes, les projets, le mode sombre.</p>
+      <div class="gallery-grid">
+        <figure><img loading="lazy" src="/img/saisie-rapide.webp" width="1400" height="895" alt="La barre de saisie avec l'aperçu des éléments reconnus"><figcaption>La saisie, avec ce que Pico a compris</figcaption></figure>
+        <figure><img loading="lazy" src="/img/a-venir-clair.webp" width="1400" height="895" alt="La liste À venir, jour par jour"><figcaption>À venir, jour par jour</figcaption></figure>
+        <figure><img loading="lazy" src="/img/projet-clair.webp" width="1400" height="895" alt="Un projet avec un ticket importé et le détail d'une tâche"><figcaption>Un projet, un ticket, le détail d'une tâche</figcaption></figure>
+        <figure><img loading="lazy" src="/img/detail-sombre.webp" width="1600" height="1023" alt="Pico en mode sombre avec le panneau de détail d'une tâche"><figcaption>Le mode sombre et le détail d'une tâche</figcaption></figure>
+      </div>
     </section>
 
     <section id="notice" class="notice">
