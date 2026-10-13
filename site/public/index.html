@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pico, le gestionnaire de tâches natif pour Mac</title>
+  <meta name="description" content="Pico comprend vos phrases : tapez « relancer le devis vendredi 9h30 #Infra @urgent », la tâche est rangée. Natif macOS, raccourci global, données 100 % locales, gratuit et open source.">
+  <meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14161B" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="canonical" href="https://pico.vialet.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pico, le gestionnaire de tâches natif pour Mac">
+  <meta property="og:description" content="Tapez une phrase, Pico comprend la date, l'heure, le projet. Natif, rapide, vos données restent sur votre Mac.">
+  <meta property="og:url" content="https://pico.vialet.app/">
+  <meta property="og:image" content="https://pico.vialet.app/img/og.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Pico, haut de page">
+      <img src="/icone-256.png" alt="" width="30" height="30">
+      <span>pico<i>.</i></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="#fonctions">Fonctions</a>
+      <a href="#capture">Capture</a>
+      <a href="#notice">Notice</a>
+      <a href="#installer">Installer</a>
+      <a class="gh" href="https://github.com/avialet/pico" rel="noopener">GitHub</a>
+    </nav>
+    <a class="btn btn-small" href="#installer" data-download>Télécharger</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Gratuit · Open source · macOS 26</p>
+        <h1>Notez-le.<br><span class="grad">Pico s'occupe du reste.</span></h1>
+        <p class="lead">Le gestionnaire de tâches natif pour Mac qui comprend vos phrases. Rapide, calme, et entièrement chez vous.</p>
+        <div class="cta">
+          <a class="btn" href="https://github.com/avialet/pico/releases/latest" data-download>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.78 1.3 10.33.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.38.81 1.4-.02 2.28-1.27 3.13-2.52.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.7-1.04-2.72-4.13zM14.47 4.4c.72-.87 1.2-2.07 1.07-3.27-1.03.04-2.28.69-3.02 1.55-.66.77-1.24 2-1.09 3.17 1.15.09 2.32-.58 3.04-1.45z"/></svg>
+            <span data-download-label>Télécharger pour Mac</span>
+          </a>
+          <a class="btn btn-ghost" href="#capture">Voir comment ça marche</a>
+        </div>
+        <p class="fine" data-download-meta>Apple Silicon · macOS 26 Tahoe ou plus récent</p>
+      </div>
+
+      <div class="demo" aria-label="Démonstration de la saisie en langage naturel">
+        <div class="demo-card">
+          <div class="demo-row">
+            <span class="plus">+</span>
+            <span class="line"><span class="typed" id="typed" aria-live="off"></span><span class="caret" aria-hidden="true"></span></span>
+          </div>
+          <div class="chips" id="chips">
+            <span class="chip sun" data-k="1">☀︎ Demain</span>
+            <span class="chip sun" data-k="2">◷ 14:00</span>
+            <span class="chip pink" data-k="3">▣ Migration serveurs</span>
+            <span class="chip lav" data-k="4">◆ urgent</span>
+            <span class="chip red" data-k="5">! Urgent</span>
+            <span class="chip grey" data-k="6">⧖ 30 min</span>
+          </div>
+        </div>
+        <p class="demo-note">Une phrase. Pico range : le jour, l'heure, le projet, les tags, la priorité, la durée.</p>
+      </div>
+    </section>
+
+    <section class="shot" aria-label="Capture de Pico">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="/img/detail-sombre.webp">
+        <img src="/img/aujourdhui-clair.webp" width="1600" height="1023" alt="Pico, la liste Aujourd'hui : tâches du jour, section Ce soir et jauge de charge de la journée" fetchpriority="high">
+      </picture>
+    </section>
+
+    <section class="values">
+      <article>
+        <h2>Capturer sans réfléchir</h2>
+        <p>Une seule ligne de texte. Pas de formulaire, pas de menu déroulant, et un raccourci qui marche depuis n'importe quelle app.</p>
+      </article>
+      <article>
+        <h2>Zéro culpabilité</h2>
+        <p>Ce qui n'a pas été fait hier attend dans « Pas encore fait », prêt à revenir à aujourd'hui en un clic. Jamais de pile rouge.</p>
+      </article>
+      <article>
+        <h2>Chez vous, vraiment</h2>
+        <p>Un fichier SQLite sur votre Mac. Aucun compte, aucun serveur, aucune télémétrie. Le code est ouvert.</p>
+      </article>
+    </section>
+
+    <section id="fonctions" class="features">
+      <h2 class="section-title">Tout ce qu'il faut, rien de trop</h2>
+      <div class="grid">
+        <article class="card" style="--c: var(--sea)">
+          <span class="ico">⌁</span>
+          <h3>Saisie en langage naturel</h3>
+          <p>« demain 14h », « lundi prochain », « dans 3 jours », « tous les lundis », « #projet », « @tag », « !! », « ~30m ». Français et anglais.</p>
+        </article>
+        <article class="card" style="--c: var(--sun)">
+          <span class="ico">☀︎</span>
+          <h3>Aujourd'hui, À venir, Un jour</h3>
+          <p>Les listes d'un système GTD, avec « Ce soir » à part et une jauge qui prévient quand la journée déborde.</p>
+        </article>
+        <article class="card" style="--c: var(--coral)">
+          <span class="ico">⚑</span>
+          <h3>Prévu ou échéance ?</h3>
+          <p>Décider quand on s'y met n'est pas la date limite. Pico garde les deux, sans fausse alerte.</p>
+        </article>
+        <article class="card" style="--c: var(--pine)">
+          <span class="ico">↻</span>
+          <h3>Récurrence souple</h3>
+          <p>Chaque jour, jours ouvrés, certains jours de la semaine, chaque mois, ou « 3 jours après l'avoir terminée ».</p>
+        </article>
+        <article class="card" style="--c: var(--lav)">
+          <span class="ico">▤</span>
+          <h3>Zones et projets</h3>
+          <p>Un anneau d'avancement par projet, des sections, des tags, une checklist et des notes pour chaque tâche.</p>
+        </article>
+        <article class="card" style="--c: var(--sea)">
+          <span class="ico">⌘</span>
+          <h3>Pensé pour le clavier</h3>
+          <p>Aller à, replanifier, déplacer, terminer : tout se fait sans souris. Et le glisser-déposer reste là quand on le préfère.</p>
+        </article>
+        <article class="card" style="--c: var(--sun)">
+          <span class="ico">◐</span>
+          <h3>Clair et sombre</h3>
+          <p>Une interface soignée, en français, qui suit l'apparence de votre Mac et reste rapide, même avec des milliers de tâches.</p>
+        </article>
+        <article class="card" style="--c: var(--pine)">
+          <span class="ico">⇣</span>
+          <h3>Mises à jour intégrées</h3>
+          <p>Pico signale la nouvelle version, vérifie son empreinte, s'installe et se relance. Désactivable en un clic.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="capture" class="capture">
+      <div class="capture-copy">
+        <p class="eyebrow">Raccourci global</p>
+        <h2 class="section-title left">Une idée ? <span class="keys"><kbd>⇧</kbd><kbd>⌘</kbd><kbd>Espace</kbd></span></h2>
+        <p>Depuis n'importe quelle app, une petite fenêtre s'ouvre par-dessus ce que vous faites. Vous tapez la phrase, <kbd>↩</kbd>, et elle se referme : la tâche est rangée au bon endroit, sans que Pico passe au premier plan.</p>
+        <ul class="ticks">
+          <li>Le raccourci se change dans les réglages</li>
+          <li>Une icône dans la barre des menus affiche le nombre de tâches du jour</li>
+          <li>Coller plusieurs lignes crée une tâche par ligne</li>
+        </ul>
+      </div>
+      <div class="mock-panel" aria-hidden="true">
+        <div class="mp-row"><span class="plus">+</span><span class="mp-text">Appeler le plombier ce soir ~15m</span></div>
+        <div class="mp-chips">
+          <span class="chip lav">☾ Aujourd'hui soir</span>
+          <span class="chip grey">⧖ 15 min</span>
+        </div>
+        <div class="mp-foot"><span><kbd>↩</kbd> ajouter</span><span><kbd>⎋</kbd> fermer</span><b>→ Aujourd'hui</b></div>
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="Autres captures">
+      <figure><img loading="lazy" src="/img/saisie-rapide.webp" width="1400" height="895" alt="La barre de saisie avec l'aperçu des éléments reconnus"><figcaption>La saisie, avec ce que Pico a compris</figcaption></figure>
+      <figure><img loading="lazy" src="/img/a-venir-clair.webp" width="1400" height="895" alt="La liste À venir, jour par jour"><figcaption>À venir, jour par jour</figcaption></figure>
+      <figure><img loading="lazy" src="/img/projet-clair.webp" width="1400" height="895" alt="Un projet avec un ticket importé et le détail d'une tâche"><figcaption>Un projet, un ticket, le détail d'une tâche</figcaption></figure>
+    </section>
+
+    <section id="notice" class="notice">
+      <h2 class="section-title">La notice en 30 secondes</h2>
+      <p class="sub">Tapez une phrase dans la barre en bas de la fenêtre. Tout est facultatif, dans n'importe quel ordre.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Pour indiquer</th><th>Écrivez</th></tr></thead>
+          <tbody>
+            <tr><td>Un jour</td><td><code>aujourd'hui</code> <code>demain</code> <code>vendredi</code> <code>lundi prochain</code> <code>ce week-end</code></td></tr>
+            <tr><td>Un délai ou une date</td><td><code>dans 3 jours</code> <code>12/10</code> <code>12 oct</code> <code>1er novembre</code></td></tr>
+            <tr><td>Une heure</td><td><code>14h</code> <code>14h30</code> <code>9:15</code> <code>2pm</code> <code>ce soir</code></td></tr>
+            <tr><td>Une échéance</td><td><code>pour vendredi</code> <code>avant le 20 oct</code> <code>échéance 12/10</code></td></tr>
+            <tr><td>Une répétition</td><td><code>chaque jour</code> <code>tous les lundis</code> <code>jours ouvrés</code> <code>toutes les 2 semaines</code></td></tr>
+            <tr><td>Projet, tags</td><td><code>#Infra</code> <code>#"Refonte du site"</code> <code>@urgent</code></td></tr>
+            <tr><td>Priorité, durée</td><td><code>!</code> importante <code>!!</code> urgente <code>~30m</code> <code>~1h30</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="example">Exemple : <code>Relancer le fournisseur demain 14h #Infra @urgent !! ~30m pour vendredi</code></p>
+      <p class="more">La notice complète, les raccourcis clavier et les détails sont dans le <a href="https://github.com/avialet/pico#notice" rel="noopener">README</a>.</p>
+    </section>
+
+    <section id="installer" class="install">
+      <h2 class="section-title">Installer Pico</h2>
+      <ol class="steps">
+        <li><b>Téléchargez</b> le DMG ci-dessous.</li>
+        <li><b>Glissez</b> Pico dans le dossier Applications.</li>
+        <li><b>Lancez-le.</b> Au premier lancement, faites un clic droit sur Pico, puis <i>Ouvrir</i>.</li>
+      </ol>
+      <a class="btn btn-big" href="https://github.com/avialet/pico/releases/latest" data-download>
+        <span data-download-label>Télécharger pour Mac</span>
+      </a>
+      <p class="fine" data-download-meta>Apple Silicon · macOS 26 Tahoe ou plus récent</p>
+
+      <details class="faq">
+        <summary>Pourquoi cet avertissement au premier lancement ?</summary>
+        <p>Pico n'est pas encore signé avec un certificat Apple Developer, alors macOS demande confirmation. Le clic droit puis « Ouvrir » suffit. Dans le Terminal, la commande équivalente est <code>xattr -dr com.apple.quarantine /Applications/Pico.app</code>.</p>
+      </details>
+      <details class="faq">
+        <summary>Comment vérifier le fichier téléchargé ?</summary>
+        <p>Chaque version publie son empreinte SHA-256. Dans le dossier du téléchargement : <code>shasum -a 256 -c Pico-X.Y.Z.dmg.sha256</code>. Pico fait cette vérification lui-même avant d'installer une mise à jour.</p>
+      </details>
+      <details class="faq">
+        <summary>Où sont mes données ?</summary>
+        <p>Dans <code>~/Library/Application Support/Pico/pico.sqlite</code>. Copiez ce dossier pour sauvegarder. Rien ne quitte votre Mac : le seul échange réseau est la lecture de la dernière version publiée sur GitHub, désactivable.</p>
+      </details>
+      <details class="faq">
+        <summary>Et la suite ?</summary>
+        <p>Rappels et notifications, événements du Calendrier, palette de commandes, import de tickets, widgets, synchronisation personnelle. La <a href="https://github.com/avialet/pico#feuille-de-route" rel="noopener">feuille de route</a> est publique.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div>
+      <a class="brand" href="#top"><img src="/icone-256.png" alt="" width="26" height="26"><span>pico<i>.</i></span></a>
+      <p>Un projet de <a href="https://app.vialet.app">Vialet</a>. Gratuit, sous licence <a href="https://github.com/avialet/pico/blob/main/LICENSE" rel="noopener">MIT</a>.</p>
+    </div>
+    <nav aria-label="Liens">
+      <a href="https://github.com/avialet/pico" rel="noopener">Code source</a>
+      <a href="https://github.com/avialet/pico/releases" rel="noopener">Versions</a>
+      <a href="https://github.com/avialet/pico/issues" rel="noopener">Signaler un souci</a>
+    </nav>
+    <p class="copy">© 2026 Aurélien Vialet · Aucun cookie, aucun traceur.</p>
+  </footer>
+</body>
+</html>
