@@ -8,7 +8,7 @@ le serveur par `rsync` via SSH, grâce au workflow `.github/workflows/deploy.yml
 | Nom | Type | Rôle |
 |---|---|---|
 | `DEPLOY_ENABLED` | variable | `true` pour activer le déploiement |
-| `DEPLOY_PATH` | variable | dossier cible sur le serveur, ex. `/var/www/pico/site/public` |
+| `DEPLOY_PATH` | variable | `.` (la clé est enfermée dans le dossier du site par `rrsync`) |
 | `DEPLOY_HOST` | secret | nom d'hôte ou IP du serveur |
 | `DEPLOY_USER` | secret | utilisateur SSH de déploiement |
 | `DEPLOY_SSH_KEY` | secret | clé privée **dédiée** à ce site |
@@ -43,8 +43,15 @@ le serveur par `rsync` via SSH, grâce au workflow `.github/workflows/deploy.yml
    }
    ```
 4. Clé SSH dédiée (`ssh-keygen -t ed25519 -f pico_site_deploy`), clé publique dans
-   `authorized_keys` de l'utilisateur de déploiement, de préférence restreinte à
-   `rsync` sur ce seul dossier.
+   `authorized_keys` de l'utilisateur de déploiement, restreinte à ce seul dossier :
+
+   ```text
+   restrict,command="/usr/bin/rrsync /var/www/pico/site/public" ssh-ed25519 AAAA… pico-site-deploy
+   ```
+
+   La clé ne donne aucun shell et ne peut ni lire ni écrire hors du dossier du site.
+   Le `rsync` de macOS (openrsync) n'est pas compatible avec `rrsync` : le déploiement
+   se fait depuis GitHub Actions (rsync 3.x), ou avec un rsync 3.x installé via Homebrew.
 
 ## Mise à jour du contenu
 
